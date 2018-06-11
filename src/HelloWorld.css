@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 28px;
+}
+
+.hello-container {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
