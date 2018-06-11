@@ -1,9 +1,9 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 
-module.exports = ({ }) => ({
+module.exports = () => ({
   output: {
     filename: "[chunkhash].js"
   },
@@ -35,15 +35,16 @@ module.exports = ({ }) => ({
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader],
-        use: [{
-          loader: 'css-loader',
-          importLoaders: 1,
-        }],
-    use: ['postcss-loader'],
-  }
+        use: [MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          }, 'postcss-loader'],
+      }
     ]
-},
+  },
   plugins: [new MiniCssExtractPlugin()]
 });
 

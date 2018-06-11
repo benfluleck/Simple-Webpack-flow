@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --env.mode development",
-    "build:prod": "webpack --env.mode production",
-    "start:dev": "webpack-dev-server --env.mode development --open --hot"
+    "build:dev": "rm -rf dist && webpack --env.mode development",
+    "build:prod": "rm -rf dist && webpack --env.mode production",
+    "start:dev": "rm -rf dist && webpack-dev-server --env.mode development --open --hot"
   },
   "author": "Benny Ogidan",
   "license": "MIT",
   "dependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
