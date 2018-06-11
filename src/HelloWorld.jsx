@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './HelloWorld.css';
 
 /**
@@ -7,13 +7,12 @@ import './HelloWorld.css';
  * @param {void}
  *
  */
-export class HelloWorld extends Component {
-  render() {
-    return (
-      <div className="hello-container">
-        <h1>Hello World!</h1>
-      </div>
-    );
-  }
-}
+const HelloWorld = () => (
+  <div className="hello-container">
+    <h1>Hello World!</h1>
+  </div>
+);
+
+
+export default HelloWorld;
 
