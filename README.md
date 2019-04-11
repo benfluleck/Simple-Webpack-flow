@@ -1,5 +1,7 @@
 # Simple Webpack flow for React
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/benfluleck/Simple-Webpack-flow.svg)](https://greenkeeper.io/)
+
 This is an application derived from [Sean Larkin](https://github.com/TheLarkInn)'s Front End Masters course on Webpack 4. Using the tools from his presentation I was able to create a good workflow for React Application using Web Pack.
 
 ## Project Setup
